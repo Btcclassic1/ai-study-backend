@@ -1,14 +1,14 @@
-const Express = require('express');
-const Cors = require('cors');
+const express = require('express');
+const cors = require('cors');
 const TelegramBot = require('node-telegram-bot-api');
 
-const app = Express();
-app.use(Cors());
-app.use(Express.json());
+const app = express();
+app.use(cors());
+app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
-// 🔒 तुम्हारे सारे टोकन और लिंक्स यहाँ सुरक्षित हैं, गिटहब पर किसी को नहीं दिखेंगे
+// 🔒 Environment Variables
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN; 
 const MINI_APP_URL = process.env.MINI_APP_URL; 
 const NETLIFY_URL = process.env.NETLIFY_URL; 
